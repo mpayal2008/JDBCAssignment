@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE computer SYSTEM "computer.dtd">
+<computer>
+    <AccessoriesTable>
+        <Accessories>
+            <brand_id>111</brand_id>
+            <brand_name>Asus</brand_name>
+            <item_names>speaker</item_names>
+            <item_description>set of 2 speakers</item_description>
+            <item_price>18.89</item_price>  
+        </Accessories>
+      	
+      	  <Accessories>
+            <brand_id>112</brand_id>
+            <brand_name>Samsung</brand_name>
+            <item_names>Headphones</item_names>
+            <item_description>bluetooth</item_description>
+            <item_price>20</item_price>  
+        </Accessories>
+     </AccessoriesTable>
+     
+     <ComputersTable>
+     	<Computers>
+     		<computer_id>10</computer_id>
+     		<internal_config_id>167</internal_config_id>
+     		<brand_name>Samsung</brand_name>
+     		<model_name>GalaxyBook</model_name>	
+     	</Computers>
+     	
+     	<Computers>
+     		<computer_id>11</computer_id>
+     		<internal_config_id>176</internal_config_id>
+     		<brand_name>HP</brand_name>
+     		<model_name>EliteBook</model_name>	
+     	</Computers>
+     	
+     	<Computers>
+     		<computer_id>12</computer_id>
+     		<internal_config_id>112</internal_config_id>
+     		<brand_name>Samsung</brand_name>
+     		<model_name>ChromeBook</model_name>	
+     	</Computers>
+     	
+     	<Computers>
+     		<computer_id>13</computer_id>
+     		<internal_config_id>23</internal_config_id>
+     		<brand_name>HP</brand_name>
+     		<model_name>Pavillion</model_name>	
+     	</Computers>
+     	
+     	<Computers>
+     		<computer_id>14</computer_id>
+     		<internal_config_id>323</internal_config_id>
+     		<brand_name>Apple</brand_name>
+     		<model_name>MacBook Air</model_name>	
+     	</Computers>
+     	
+     </ComputersTable>
+     
+     <CustomerTable>
+     	<Customer>
+     		<customer_id>500</customer_id>
+     		<username>pmokal</username>
+     		<password>pm1234</password>
+     		<fullname>Payal Mokal</fullname>
+     		<email>pmokal@gmail.com</email>
+     	</Customer>
+     	
+     	<Customer>
+     		<customer_id>501</customer_id>
+     		<username>Bill</username>
+     		<password>bill980</password>
+     		<fullname>Bill Conner</fullname>
+     		<email>billconner@gmail.com</email>
+     	</Customer>
+     </CustomerTable>
+     
+     <MaintenanceTable>
+     	<Maintenance>
+     		<maintenance_id>21</maintenance_id>
+     		<computer_id>10</computer_id>
+     		<maintenance_date>2020-12-09</maintenance_date>
+     		<details>software issue</details>
+     		<maintenance_price>100</maintenance_price>
+     		<maintenace_status>issue closed</maintenace_status>
+     		<engineer_name>zen</engineer_name>
+     	</Maintenance>
+     </MaintenanceTable>
+     
+     <OrderDataTable>
+     	<OrderData>
+     		<order_id>700</order_id>
+     		<computer_id>11</computer_id>
+     		<order_date>2021-03-06</order_date>
+     		<order_detail>boughtlaptop with Samsung Headphones</order_detail>
+     		<customer_id>501</customer_id>
+     	</OrderData>
+     	  	
+     </OrderDataTable>    
+</computer>

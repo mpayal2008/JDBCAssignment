@@ -1,0 +1,47 @@
+{
+  
+        {
+          "computer_id": 12,
+          "internal_config_id": 170,
+          "brand_name": "Samsung",
+          "model_name": "Galaxy"
+        },
+        {
+          "computer_id": 13,
+          "internal_config_id": 132,
+          "brand_name": "Samsung",
+          "model_name": "Tablet"
+        }
+     
+    
+    
+    "CustomerTable": {
+      "Customer": [
+        {
+          "customer_id": 505,
+          "username": "Tiabela",
+          "password": "tia1201",
+          "fullname": "Tiabela M",
+          "email": "Tiabela@yahoo.com"
+        },
+        {
+          "customer_id": 504,
+          "username": "jimmy",
+          "password": "jim980",
+          "fullname": "J Conner",
+          "email": "j12conner@gmail.com"
+        }
+      ]
+    },
+    
+    "OrderDataTable": {
+      "OrderData": {
+        "order_id": 701,
+        "computer_id": 10,
+        "order_date": "2021-04-10",
+        "order_detail": "boughtlaptop with Samsung Headphones",
+        "customer_id": 504
+      }
+    }
+  }
+}

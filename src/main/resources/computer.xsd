@@ -1,0 +1,101 @@
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="computer">
+	<xs:complexType>
+	<xs:sequence>
+		<xs:element name= "AccessoriesTable">
+		<xs:complexType>
+		<xs:sequence>
+			<xs:element name="Accessories" maxOccurs="unbounded">
+				<xs:complexType>
+				<xs:sequence>
+					<xs:element name="brand_id" type="xs:int"/>
+					<xs:element name="brand_name" type="xs:string"/>
+					<xs:element name="item_names" type="xs:string"/>
+					<xs:element name="item_description" type="xs:string"/>
+					<xs:element name="item_price" type="xs:float"/>
+				</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		</xs:complexType>
+		</xs:element>
+		
+		<xs:element name= "ComputersTable">
+		<xs:complexType>
+		<xs:sequence>
+			<xs:element name= "Computers" maxOccurs= "unbounded">
+				<xs:complexType>
+				<xs:sequence>
+					<xs:element name= "computer_id" type="xs:int"/>
+					<xs:element name="internal_config_id" type="xs:string"/>
+					<xs:element name="brand_name" type="xs:string"/>
+					<xs:element name="model_name" type="xs:string"/>
+				</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		</xs:complexType>
+		</xs:element>
+		
+		<xs:element name= "CustomerTable">
+		<xs:complexType>
+		<xs:sequence>
+			<xs:element name= "Customer" maxOccurs= "unbounded">
+				<xs:complexType>
+				<xs:sequence>
+					<xs:element name= "customer_id" type="xs:int"/>
+					<xs:element name="username" type="xs:string"/>
+					<xs:element name="password" type="xs:string"/>
+					<xs:element name="fullname" type="xs:string"/>
+					<xs:element name="email" type="xs:string"/>
+				</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		</xs:complexType>
+		</xs:element>
+		
+		<xs:element name= "MaintenanceTable">
+		<xs:complexType>
+		<xs:sequence>
+			<xs:element name= "Maintenance" maxOccurs= "unbounded">
+				<xs:complexType>
+				<xs:sequence>
+					<xs:element name= "maintenance_id" type="xs:int"/>
+					<xs:element name= "computer_id" type="xs:int"/>
+					<xs:element name="maintenance_date" type="xs:date"/>
+					<xs:element name="details" type="xs:string"/>
+					<xs:element name= "maintenance_price" type="xs:decimal"/>
+					<xs:element name="maintenace_status" type="xs:string"/>
+					<xs:element name="engineer_name" type="xs:string"/>
+				</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		</xs:complexType>
+		</xs:element>
+		
+		<xs:element name= "OrderDataTable">
+		<xs:complexType>
+		<xs:sequence>
+			<xs:element name= "OrderData" maxOccurs= "unbounded">
+				<xs:complexType>
+				<xs:sequence>
+					<xs:element name= "order_id" type="xs:int"/>
+					<xs:element name= "computer_id" type="xs:int"/>
+					<xs:element name="order_date" type="xs:date"/>
+					<xs:element name="order_detail" type="xs:string"/>
+					<xs:element name="customer_id" type="xs:string"/>
+				</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		</xs:complexType>
+		</xs:element>
+		
+	</xs:sequence>
+	</xs:complexType>	
+</xs:element>
+</xs:schema>
+
