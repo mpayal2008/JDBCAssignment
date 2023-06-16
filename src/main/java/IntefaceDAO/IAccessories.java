@@ -1,5 +1,9 @@
 package IntefaceDAO;
 
-public interface IAccessories {
+import models.Accessories;
 
+public interface IAccessories extends IGenericDAO<Accessories>{
+
+	public void getItemsByBrandName();
+	
 }

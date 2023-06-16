@@ -1,6 +1,8 @@
 package DAOClasses;
 
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.SQLException;
 
 import org.apache.logging.log4j.LogManager;
@@ -13,7 +15,7 @@ public class mainDAOExecution {
 	
 final static Logger logger = LogManager.getLogger(mainDAOExecution.class);
 	
-	public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) throws SQLException, ClassNotFoundException, FileNotFoundException, IOException {
 	
 		AccessoriesDAO accesoriesDAO = new AccessoriesDAO();
 		Accessories accessories = accesoriesDAO.getID(102);

@@ -4,16 +4,12 @@ package XMLParse;
 
 import java.util.List;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
-
+/*
 @XmlRootElement(name = "AccessoriesTable")
 @XmlAccessorType(XmlAccessType.FIELD)
 
 
-public class AccessoriesTable<> {
+public class AccessoriesTable<Accessories> {
 
 	 @XmlElement(name = "Accessories")
 	 private List<Accessories> accessories;
@@ -28,3 +24,4 @@ public class AccessoriesTable<> {
 	 
 }
 
+*/

@@ -65,46 +65,41 @@ public class XMLParser {
 
 	//normalize xml structure
 	document.getDocumentElement().normalize();
-
-	//get all elements by tag name
-	NodeList nodelist=  document.getElementsByTagName("*");
-  
-    for (int i = 0; i < nodelist.getLength(); i++) {
-    	System.out.println(nodelist.getLength());
-    	Node node= nodelist.item(i);
-    		if(node.getNodeType()==Node.ELEMENT_NODE) {
-    			Element rootNode= (Element) node;
-    			System.out.println("root node "+rootNode.getNodeName());
-    			//get child element
-    			NodeList nodeList1=node.getChildNodes();
+	//to display xml file with node names
+	displayXMLFile(document);
 	
-    			for(int j=0; j<nodeList1.getLength(); j++) {
-    				Node node1=nodeList1.item(j);
-    				Element childElement= (Element)nodeList1;
-    				
-    				
-    				//System.out.println(childElement.getTextContent());
-    				//System.out.println(" "+childElement.getNodeName()+" "+childElement.getTagName()+" : "+childElement.getTextContent());
-    				//String tag= 
-    				 String computer_id = childElement.getElementsByTagName("computer_id").item(j).getTextContent();
-                     String internal_config_id = childElement.getElementsByTagName("internal_config_id").item(j).getTextContent();
-                     String brand_name = childElement.getElementsByTagName("brand_name").item(j).getTextContent();
-                     String model_name = childElement.getElementsByTagName("model_name").item(j).getTextContent();
-                  
-                  //   System.out.println("computer_id1 " + computer_id);
-                     System.out.println(childElement.getNodeName());
-                   //  System.out.println("computer_id " + computer_id);
-                     //System.out.println("internal_config_id " + internal_config_id);
-                    // System.out.println("brand_name " + brand_name);
-                    // System.out.println("model_name: " + model_name);
-                    
-                     System.out.println("----------------------------");
-    			}
-    		}
-    }        
-}
+/*	//to display data from one node
+	
+	NodeList nodelist=  document.getElementsByTagName("*");
+	  
+	  
+   for (int i = 0; i < nodelist.getLength(); i++) {
+	   Node node= nodelist.item(i);
+    	if(node.getNodeType()==Node.ELEMENT_NODE) {
+    	Element rootNode= (Element) node;
+    	logger.info("root node "+rootNode.getNodeName());
+    	//get child element
+    	NodeList nodeList1=node.getChildNodes();
+    	//	logger.info("child nodes "+node.getNodeName());
+    	for(int j=0; j<nodeList1.getLength(); j++) {
+    		Node node1=nodeList1.item(j);
+    		Element childElement= (Element)nodeList1;
 
-   
+    		String computer_id = childElement.getElementsByTagName("computer_id").item(j).getTextContent();
+    		String internal_config_id = childElement.getElementsByTagName("internal_config_id").item(j).getTextContent();
+    		String brand_name = childElement.getElementsByTagName("brand_name").item(j).getTextContent();
+    		String model_name = childElement.getElementsByTagName("model_name").item(j).getTextContent();
+ 
+    		logger.info("computer_id " + computer_id);
+    		logger.info("internal_config_id " + internal_config_id);
+    		logger.info("brand_name " + brand_name);
+    		logger.info("model_name: " + model_name); 
+    	}
+    	}
+   }
+*/
+}
+ 
   private static void validateXMLnXSD(String xmlFile, String xsdFile) throws SAXException {
 	       
     SchemaFactory schemafactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
@@ -121,9 +116,25 @@ public class XMLParser {
 			e.printStackTrace();
 	}  
   }
+  
+  private static void displayXMLFile(Node node) {
+   NodeList childNodes = node.getChildNodes(); 
+   for (int i = 0; i < childNodes.getLength(); i++) {
+    Node node1= childNodes.item(i);
+     if(node1.getNodeType()==Node.ELEMENT_NODE) {
+      displayXMLFile(node1);
+      	System.out.println(node1.getNodeName() +" : "+ node1.getTextContent()+"\n");
+     }
+   }
+  }    
 }
+  
+	    			
+	    			
+	    		
+	 
+  
+  
 
-
-
-
+      
 

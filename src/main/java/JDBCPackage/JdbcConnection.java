@@ -9,11 +9,14 @@ import java.sql.Statement;
 public class JdbcConnection {
 
 //	private static final String MYSQL_JDBC_DRIVER_NAME = "com.mysql.cj.jdbc.Driver";
-
+	private static String db_url = "jdbc:mysql://localhost:3306/Solvd_computer";
+	private static String username = "root";
+	private static String password = "root1234";
+	
 	private JdbcConnection() {
 	}
 	
-	public static Connection getConnection(String db_url, String username, String password) throws SQLException {
+	public static Connection getConnection() throws SQLException {
 		
 		Connection connection = DriverManager.getConnection(db_url, username, password);
 		return connection;

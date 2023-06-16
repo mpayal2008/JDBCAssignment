@@ -1,0 +1,65 @@
+{
+  "DataTable": {
+    "ComputersTable": {
+      "Computers": [
+        {
+          "computer_id": 10,
+          "internal_config_id": 167,
+          "brand_name": "Samsung",
+          "model_name": "GalaxyBook"
+        },
+        {
+          "computer_id": 11,
+          "internal_config_id": 176,
+          "brand_name": "HP",
+          "model_name": "EliteBook"
+        },
+        {
+          "computer_id": 12,
+          "internal_config_id": 112,
+          "brand_name": "Samsung",
+          "model_name": "ChromeBook"
+        },
+        {
+          "computer_id": 13,
+          "internal_config_id": 23,
+          "brand_name": "HP",
+          "model_name": "Pavillion"
+        },
+        {
+          "computer_id": 14,
+          "internal_config_id": 323,
+          "brand_name": "Apple",
+          "model_name": "MacBook Air"
+        }
+      ]
+    },
+    "CustomerTable": {
+      "Customer": [
+        {
+          "customer_id": 500,
+          "username": "pmokal",
+          "password": "pm1234",
+          "full_name": "Payal Mokal",
+          "email": "pmokal@gmail.com"
+        },
+        {
+          "customer_id": 501,
+          "username": "Bill",
+          "password": "bill980",
+          "full_name": "Bill Conner",
+          "email": "billconner@gmail.com"
+        }
+      ]
+    },
+    "OrderDataTable": {
+      "OrderData": {
+        "order_id": 700,
+        "computer_id": 11,
+        "order_date": "2021-03-06",
+        "order_detail": "bought laptop with Samsung Headphones",
+        "customer_id": 501
+      }
+    }
+  }
+}

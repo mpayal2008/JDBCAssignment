@@ -1,5 +1,7 @@
 package IntefaceDAO;
 
-public interface IComputers {
+import models.Computers;
 
+public interface IComputers extends IGenericDAO<Computers> {
+	
 }

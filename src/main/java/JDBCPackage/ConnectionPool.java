@@ -8,7 +8,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 	import java.sql.Connection;
 	import java.sql.DriverManager;
-	import java.sql.SQLException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -89,6 +91,33 @@ import java.util.Properties;
 		 		logger.info("no connection");
 		 }
 	 }
+	    public static void closeConnection(Connection connection) {
+			try {
+				if(connection != null ) {
+					connection.close();
+				}
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		public static void closeStatement(Statement statement) {
+			try {
+				if(statement != null ) {
+					statement.close();
+				}
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		public static void closeResultSet(ResultSet resultSet) {
+			try {
+				if(resultSet != null ) {
+					resultSet.close();
+				}
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
 }
 
 
