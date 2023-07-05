@@ -19,23 +19,7 @@
             <item_price>20</item_price>  
         </Accessories>
      </AccessoriesTable>
-     
-     <ComputersTable>
-     	<Computers>
-     		<computer_id>10</computer_id>
-     		<internal_config_id>167</internal_config_id>
-     		<brand_name>Samsung</brand_name>
-     		<model_name>GalaxyBook</model_name>	
-     	</Computers>
-     	
-     	<Computers>
-     		<computer_id>11</computer_id>
-     		<internal_config_id>176</internal_config_id>
-     		<brand_name>Samsung</brand_name>
-     		<model_name>ChromeBook</model_name>	
-     	</Computers>
-     </ComputersTable>
-     
+
      <CustomerTable>
      	<Customer>
      		<customer_id>500</customer_id>
@@ -58,23 +42,12 @@
      	<Maintenance>
      		<maintenance_id>21</maintenance_id>
      		<computer_id>10</computer_id>
-     		<maintenance_date>12-3-2020</maintenance_date>
+     		<maintenance_date>2020-12-12</maintenance_date>
      		<details>software issue</details>
      		<maintenance_price>100</maintenance_price>
      		<maintenace_status>issue closed</maintenace_status>
      		<engineer_name>zen</engineer_name>
      	</Maintenance>
      </MaintenanceTable>
-     
-     <OrderDataTable>
-     	<OrderData>
-     		<order_id>700</order_id>
-     		<computer_id>11</computer_id>
-     		<order_date>09-23-2021</order_date>
-     		<order_detail>boughtlaptop with Samsung Headphones</order_detail>
-     		<customer_id>501</customer_id>
-     	</OrderData>
-     	
-     </OrderDataTable>
-     
+
 </computer>

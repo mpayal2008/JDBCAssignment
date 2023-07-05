@@ -2,15 +2,25 @@ package models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Customer {
+	@XmlElement(name = "customer_id")
 	@JsonProperty("customer_id")
 	private int customer_id;
+	@XmlElement(name = "username")
 	@JsonProperty("username")
 	private String username;
+	@XmlElement(name = "password")
 	@JsonProperty("password")
 	private String password;
+	@XmlElement(name = "full_name")
 	@JsonProperty("full_name")
 	private String full_name;
+	@XmlElement(name = "email")
 	@JsonProperty("email")
 	private String email;
 	
@@ -48,6 +58,6 @@ public class Customer {
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}
 
+	}
 }
