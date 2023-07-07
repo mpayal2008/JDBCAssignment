@@ -2,10 +2,10 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="java.database.mapper.ComputersMapper">
+<mapper namespace="mapper.ComputersMapper">
 
     <select id="getDetailsByID" resultMap="result" >
-        select * from Computers where computer_id=1006
+        select * from Computers where computer_id= #{computer_id}
     </select>
 
     <resultMap id="result" type="computerclass">
