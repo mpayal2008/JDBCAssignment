@@ -2,13 +2,13 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="java.database.mybatis.IComputerMapper">
+<mapper namespace="java.database.mapper.ComputersMapper">
 
-    <select id="getDetailsByID"  resultMap="result" >
-        select computer_id,internal_config_id,brand_name,model_name from Computers where computer_id=1006
+    <select id="getDetailsByID" resultMap="result" >
+        select * from Computers where computer_id=1006
     </select>
 
-    <resultMap id="result" type="src/main/java/models/Computers.java">
+    <resultMap id="result" type="computerclass">
         <id property="computer_id" column="computer_id"/>
         <result property="internal_config_id" column="internal_config_id"/>
         <result property="brand_name" column="brand_name"/>

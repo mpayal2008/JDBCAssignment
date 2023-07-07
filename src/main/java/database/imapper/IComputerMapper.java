@@ -1,4 +1,4 @@
-package database.mybatis;
+package database.imapper;
 
 import models.Computers;
 

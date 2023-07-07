@@ -26,7 +26,7 @@ public class Computers {
 		this.model_name = model_name;
 	}
 	public Computers() {
-		// TODO Auto-generated constructor stub
+
 	}
 	public int getComputer_id() {
 		return computer_id;

@@ -1,4 +1,4 @@
-package database.daopackage;
+package database.daoimpl;
 
 public abstract class AbstarctDAO {
 

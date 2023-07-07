@@ -23,7 +23,7 @@ import org.xml.sax.SAXException;
 
 
 public class XMLParser {
-	final static Logger logger = LogManager.getLogger(XMLParser.class);
+	final static Logger LOGGER = LogManager.getLogger(XMLParser.class);
 	
 	@SuppressWarnings("unused")
 	public static void main(String[] args) throws SAXException, IOException, ParserConfigurationException {
@@ -34,24 +34,24 @@ public class XMLParser {
 	
 		//to check if files are loaded
 	if(xmlFile==null) {
-		logger.info("Failed to load XML file.");
+		LOGGER.info("Failed to load XML file.");
 	}else{
-		logger.info("file loaded");
+		LOGGER.info("file loaded");
 	}
 	
 	if(xsdFile==null) {
-		logger.info("Failed to load XSD file.");
+		LOGGER.info("Failed to load XSD file.");
 	}else{
-		logger.info("file loaded");
+		LOGGER.info("file loaded");
 	}
 	//calling method to validate xml file
 	validateXMLnXSD(xmlFile, xsdFile);
 	
 	// To Parse XML file
 	if(xmlFile==null) {
-		logger.info("Failed to load XML file.");
+		LOGGER.info("Failed to load XML file.");
 	}else{
-		logger.info("file loaded");
+		LOGGER.info("file loaded");
 	}
 
 	// Create a DocumentBuilder
@@ -76,7 +76,7 @@ public class XMLParser {
     try {
 		validator.validate(source);
 	} catch (SAXException | IOException e) {
-		// TODO Auto-generated catch block
+
 		e.printStackTrace();
 	}
   }

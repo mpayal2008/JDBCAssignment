@@ -1,9 +1,9 @@
-package database.daopackage;
+package database.daoimpl;
 
 import java.sql.SQLException;
 import java.util.List;
 
-import services.IAccessories;
+import database.services.IAccessories;
 import models.Accessories;
 
 public class AccessoriesDAO implements IAccessories{

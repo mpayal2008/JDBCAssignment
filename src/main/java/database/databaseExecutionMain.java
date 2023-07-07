@@ -3,15 +3,15 @@ package database;
 import java.sql.SQLException;
 import java.util.List;
 
-import database.daopackage.ComputersDAO;
-import database.daopackage.OrderDataDAO;
+import database.daoimpl.ComputersDAO;
+import database.daoimpl.OrderDataDAO;
 import models.Computers;
 import models.OrderData;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import services.IComputers;
-import services.IOrderData;
+import database.services.IComputers;
+import database.services.IOrderData;
 
 public class databaseExecutionMain {
 	private static final Logger logger = LogManager.getLogger(databaseExecutionMain.class);

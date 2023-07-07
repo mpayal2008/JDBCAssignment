@@ -1,4 +1,4 @@
-package database.daopackage;
+package database.daoimpl;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import services.IOrderData;
+import database.services.IOrderData;
 import database.jdbc.JdbcConnection;
 
 import models.OrderData;

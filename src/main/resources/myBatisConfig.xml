@@ -3,6 +3,10 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <typeAliases>
+        <typeAlias type="main.java.models.Computers.java" alias="computerclass"/>
+        <typeAlias type="main.java.models.Customer" alias="customerclass"/>
+    </typeAliases>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -15,6 +19,7 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="mybatis/ComputersMapper.xml"/>
+        <mapper resource="resources/mybatis/ComputersMapper.xml"/>
+        <mapper resource="resources/mybatis/CustomerMapper.xml"/>
     </mappers>
 </configuration>

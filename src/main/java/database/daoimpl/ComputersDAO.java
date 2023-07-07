@@ -1,4 +1,4 @@
-package database.daopackage;
+package database.daoimpl;
 
 
 import java.sql.Connection;
@@ -12,7 +12,7 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import services.IComputers;
+import database.services.IComputers;
 
 import database.jdbc.JdbcConnection;
 import models.Computers;

@@ -1,9 +1,9 @@
-package database.daopackage;
+package database.daoimpl;
 
 import java.sql.SQLException;
 import java.util.List;
 
-import services.ICustomers;
+import database.services.ICustomers;
 import models.Customer;
 
 public class CustomerDAO implements ICustomers {

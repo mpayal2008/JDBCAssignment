@@ -1,17 +1,17 @@
 package jsonparse;
 
-import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.DatabindException;
 import models.*;
 import java.io.File;
 import java.io.IOException;
 
 public class JsonParser {
    public static void main(String[] args) throws IOException {
-        File jsonFile = new File("src/main/resources/json2.json");
+ /*       File jsonFile = new File("src/main/resources/json2.json");
+
+      try{
         ObjectMapper objectMapper = new ObjectMapper();
-        try {
             // Read JSON file into an object
             ComputerData computerData;
             computerData = objectMapper.readValue(jsonFile, ComputerData.class);
@@ -46,9 +46,7 @@ public class JsonParser {
         } catch (Exception  e) {
            System.out.println(e);
         }
-
+*/
     }
-
-
 }
 

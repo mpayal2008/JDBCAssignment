@@ -3,13 +3,13 @@ package database;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-import database.daopackage.ComputersDAO;
+import database.daoimpl.ComputersDAO;
 import database.jdbc.ConnectionPool;
 import models.Computers;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import services.IComputers;
+import database.services.IComputers;
 
 public class MainDatabase {
 

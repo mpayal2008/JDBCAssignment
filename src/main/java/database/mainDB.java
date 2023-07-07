@@ -8,8 +8,8 @@ import database.jdbc.JdbcConnection;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import database.daopackage.ComputersDAO;
-import services.IComputers;
+import database.daoimpl.ComputersDAO;
+import database.services.IComputers;
 import models.Computers;
 
 public class mainDB {
