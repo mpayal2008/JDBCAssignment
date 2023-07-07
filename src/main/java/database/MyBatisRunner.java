@@ -1,5 +1,6 @@
 package database;
 
+import database.imapper.IComputersMapper;
 import database.mapper.ComputersMapper;
 import models.Computers;
 import org.apache.ibatis.io.Resources;
@@ -11,25 +12,26 @@ import java.io.IOException;
 import java.io.Reader;
 
 public class MyBatisRunner {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
+        try {
+            Reader reader = Resources.getResourceAsReader("myBatisConfig.xml");
+            SqlSessionFactory sessionFactory = null;
+            SqlSession session = null;
+            sessionFactory = new SqlSessionFactoryBuilder().build(reader);
 
-        Reader reader= Resources.getResourceAsReader("myBatisConfig.xml");
-        SqlSessionFactory sessionFactory= null;
-        SqlSession session= null;
-        sessionFactory = new SqlSessionFactoryBuilder().build(reader);
+            // Get the computersMapper instance
+         //   sessionFactory.getConfiguration().addMapper(IComputersMapper.class);
+            session = sessionFactory.openSession();
+            IComputersMapper computersMapper = session.getMapper(IComputersMapper.class);
 
-        // Get the computersMapper instance
-        sessionFactory.getConfiguration().addMapper(ComputersMapper.class);
-        session = sessionFactory.openSession();
-        ComputersMapper computersMapper = session.getMapper(ComputersMapper.class);
+            Computers computers = new Computers();
 
-        Computers computers = new Computers();
-
-        // Retrieve a user by ID
-        Computers comp = computersMapper.getDetailsByID(1006);
-
-        System.out.println("Retrieved user: " + comp);
-
+            // Retrieve a user by ID
+            Computers comp = computersMapper.getDetailsByID(1006);
+            System.out.println("comp : " + comp);
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 }

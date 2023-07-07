@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.Reader;
 
 public class MyBatisUtil {
-
+/*
     public static SqlSessionFactory sessionFactory;
     Reader reader;
     //to read configuration file
@@ -24,5 +24,5 @@ public class MyBatisUtil {
     public static SqlSessionFactory getSessionFactory(){
         return sessionFactory;
     }
-
+*/
 }
